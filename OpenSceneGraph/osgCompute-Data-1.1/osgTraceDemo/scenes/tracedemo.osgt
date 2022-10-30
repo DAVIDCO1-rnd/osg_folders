@@ -1,0 +1,22 @@
+#Ascii Scene 
+#Version 2 
+#Generator OpenSceneGraph 2.9.9 
+
+osgCuda::Computation { 
+  UniqueID 1 
+  Name "trace particles computation" 
+  DataVariance DYNAMIC 
+  Children 1 { 
+    osgCuda::Computation { 
+      UniqueID 2 
+      Name "emit particles computation" 
+      DataVariance DYNAMIC 
+      Modules 1 { 
+        "osgcuda_ptclemitter" 
+      } 
+    } 
+  } 
+  Modules 1 { 
+    "osgcuda_ptcltracer" 
+  } 
+} 
